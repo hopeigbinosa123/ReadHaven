@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Club</title>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <h1>Book Club</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="books.html">Books</a></li>
+            <li><a href="contact.html">Contact</a></li>
+            <li><a href="donate.html">Donate</a></li>
+        </ul>
+    </nav>
+    <main>
+        <h1>Welcome to the Book Club</h1>
+        <div id="books-list"></div>
+    </main>
+
+    <!-- The Model-->
+     <div id="formatModal" class="modal">
+        <div class="modal-content">
+            <span class="closeModel" style="float: right;cursor: pointer;">&times;</span>
+            <h2>Select Format</h2>
+            <p>Choose the format for your book:</p>
+             <button id="choosePdf">Read PDF</button>
+             <button id="chooseEpub">Read EPUB</button>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2020 Book Club</p>
+    </footer>
+    <script src="js/app.js"></script>
+</body>
+</html>
