@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book Club - Contact</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+  <script type="text/javascript">
+    (function(){
+       emailjs.init("Gz5Mi04YRrITXuo4U");  <!-- Replace "your_user_id" with your actual EmailJS User ID -->
+    })();
+  </script>
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="books.html">Books</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="donate.html">Donate</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <h1>Contact Me</h1>
+    <section class="contact-content">
+      <p>If you have any questions, feedback, or just want to say hello, feel free to get in touch using the form below. I’d love to hear from you!</p>
+
+      <form action="#" method="post" class="contact-form">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+        
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+        
+        <button type="submit">Send Message</button>
+      </form>
+    </section>
+  </main>
+  <script>
+    document.querySelector('.contact-form').addEventListener('submit', function(event) {
+      event.preventDefault();
+
+      emailjs.sendForm('service_zqzzc6c', 'template_y45v74z', this)
+        .then(function() {
+          alert('Your message has been sent!');
+        }, function(error) {
+          console.error('FAILED...', error);
+          alert('Oops, something went wrong. Please try again.');
+        });
+    });
+  </script>
+</body>
+</html>
