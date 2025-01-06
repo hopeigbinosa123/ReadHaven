@@ -36,12 +36,3 @@ if __name__ == "__main__":
     books = update_books_json()  # Capture the return value of the function
     print(f'Updated {json_file} with {len(books)} books')
 
-from http.server import BaseHTTPRequestHandler
-
-class handler(BaseHTTPRequestHandler):
-    def do_GET(self):
-        self.send_response(200)
-        self.send_header('Content-type', 'text/plain')
-        self.end_headers()
-        self.wfile.write(b'Hello from Python on Vercel!')
-        return
